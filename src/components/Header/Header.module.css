@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 21.4375rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-family: var(--font-sans);
+}
+
+@media (min-width: 48rem) {
+    .header {
+        max-width: 45rem;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 84rem) {
+    .header {
+        max-width: 76rem;
+    }
+}

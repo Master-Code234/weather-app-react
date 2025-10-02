@@ -1,0 +1,20 @@
+.statCard {
+    padding: var(--padding-20) var(--padding-20);
+    background-color: var(--neutral-800);
+    border-radius: var(--radius-12);
+    border: 1px solid var(--neutral-600);
+    text-align: left;
+}
+
+.label {
+    color: var(--neutral-200);
+    font-size: var(--font-size-preset-6);
+    font-weight: var(--fw-500);
+    margin-bottom: var(--spacing-300);
+}
+
+.value {
+    color: var(--neutral-0);
+    font-size: var(--font-size-preset-3);
+    font-weight: var(--fw-300);
+}

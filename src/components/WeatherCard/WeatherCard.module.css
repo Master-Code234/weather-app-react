@@ -1,0 +1,31 @@
+.weatherCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/images/bg-today-small.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 17.875rem;
+    width: 21.4375rem;
+    padding: var(--spacing-1000) var(--spacing-300);
+    margin-bottom: var(--spacing-250);
+    border-radius: var(--radius-20);
+}
+
+/* Tablet styles */
+@media (min-width: 48rem) {
+    .weatherCard {
+        background-image: url("../../assets/images/bg-today-large.svg");
+        max-width: 45rem;
+        width: 100%;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 84rem) {
+    .weatherCard {
+        min-width: var(--width-800);
+        margin-bottom: var(--spacing-300);
+    }
+}

@@ -1,0 +1,22 @@
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-200);
+    margin-bottom: var(--spacing-400);
+}
+
+/* Tablet styles */
+@media (min-width: 48rem) {
+    .statsGrid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing-250);
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 84rem) {
+    .statsGrid {
+        gap: var(--spacing-300);
+        margin-bottom: var(--spacing-600);
+    }
+}

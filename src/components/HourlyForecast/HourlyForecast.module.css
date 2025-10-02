@@ -1,0 +1,32 @@
+.hourlyForecast {
+    background-color: var(--neutral-800);
+    padding: var(--padding-20) var(--padding-16);
+    border-radius: var(--radius-20);
+    color: var(--neutral-0);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: var(--font-size-preset-5);
+    font-weight: var(--fw-500);
+}
+
+.selector {
+    display: flex;
+    border-radius: var(--radius-8);
+    background-color: var(--neutral-600);
+    padding: var(--padding-8) var(--padding-16);
+    gap: var(--spacing-150);
+}
+
+/* Desktop styles */
+@media (min-width: 84rem) {
+    .hourlyForecast {
+        min-width: 24rem;
+        padding: var(--padding-24) var(--padding-24);
+    }
+}

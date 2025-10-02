@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-sans: "DM Sans", sans-serif;
+    --font-bricolage: "Bricolage Grotesque", sans-serif;
+    --font-size-preset-1: 6rem;
+    --font-size-preset-2: 3.25rem;
+    --font-size-preset-3: 2rem;
+    --font-size-preset-4: 1.75rem;
+    --font-size-preset-5: 1.25rem;
+    --font-size-preset-6: 1.125rem;
+    --font-size-preset-7: 1rem;
+    --fw-700: 700;
+    --fw-600: 600;
+    --fw-500: 500;
+    --fw-300: 300;
+    --neutral-900: hsl(243, 96%, 9%);
+    --neutral-800: hsl(243, 27%, 20%);
+    --neutral-700: hsl(243, 23%, 24%);
+    --neutral-600: hsl(243, 23%, 30%);
+    --neutral-300: hsl(240, 6%, 70%);
+    --neutral-200: hsl(250, 6%, 84%);
+    --neutral-0: hsl(0, 0%, 100%);
+    --orange-500: hsl(28, 100%, 52%);
+    --blue-500: hsl(233, 67%, 56%);
+    --blue-700: hsl(248, 70%, 36%);
+    --spacing-1400: 7rem;
+    --spacing-1000: 5rem;
+    --spacing-600: 3rem;
+    --spacing-400: 2rem;
+    --spacing-300: 1.5rem;
+    --spacing-250: 1.25rem;
+    --spacing-200: 1rem;
+    --spacing-150: 0.75rem;
+    --spacing-125: 0.625rem;
+    --spacing-100: 0.5rem;
+    --radius-8: 0.5rem;
+    --radius-12: 0.75rem;
+    --radius-20: 1.25rem;
+    --width-800: 50rem;
+    --width-120: 7.5rem;
+    --height-120: 7.5rem;
+    --padding-112: 7rem;
+    --padding-80: 5rem;
+    --padding-48: 3rem;
+    --padding-24: 1.5rem;
+    --padding-20: 1.25rem;
+    --padding-16: 1rem;
+    --padding-12: 0.75rem;
+    --padding-10: 0.625rem;
+    --padding-8: 0.5rem;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+}

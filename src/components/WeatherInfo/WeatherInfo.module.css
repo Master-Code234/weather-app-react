@@ -1,0 +1,43 @@
+.weatherInfo {
+    color: var(--neutral-0);
+}
+
+.location {
+    font-size: var(--font-size-preset-4);
+    font-weight: var(--fw-700);
+    margin-bottom: var(--spacing-150);
+}
+
+.date {
+    font-size: var(--font-size-preset-6);
+    font-weight: var(--fw-500);
+    opacity: 80%;
+}
+
+.weatherConditions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature {
+    font-size: var(--font-size-preset-1);
+    font-weight: var(--fw-600);
+    font-style: italic;
+    margin-left: var(--spacing-250);
+}
+
+.icon {
+    width: var(--width-120);
+    height: var(--height-120);
+}
+
+@media (min-width: 48rem) {
+    .weatherInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+    }
+}

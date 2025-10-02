@@ -1,0 +1,35 @@
+.card {
+    display: flex;
+    align-items: center;
+    background-color: var(--neutral-700);
+    border: 1px solid var(--neutral-600);
+    border-radius: var(--radius-8);
+    padding-top: var(--padding-10);
+    padding-bottom: var(--padding-10);
+    padding-left: var(--padding-12);
+    padding-right: var(--padding-16);
+    margin-top: var(--spacing-200);
+}
+
+.weatherData {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: var(--spacing-100);
+}
+
+.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.time {
+    font-size: var(--font-size-preset-5);
+    font-weight: var(--fw-500);
+}
+
+.temp {
+    font-size: var(--font-size-preset-7);
+    font-weight: var(--fw-500);
+}
