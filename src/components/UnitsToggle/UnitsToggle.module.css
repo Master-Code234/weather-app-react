@@ -1,3 +1,8 @@
+.unitsWrapper {
+    position: relative;
+    display: inline-block;
+}
+
 .unitsToggle {
     display: flex;
     align-items: center;
