@@ -1,5 +1,7 @@
+import { useState, useRef, useEffect } from "react";
 import styles from "./HourlyForecast.module.css";
 import HourlyForecastCard from "../HourlyForecastCard/HourlyForecastCard";
+import DayDropdown from "../DayDropdown/DayDropdown";
 import overcastIcon from "../../assets/images/icon-overcast.webp";
 import partlyCloudyIcon from "../../assets/images/icon-partly-cloudy.webp";
 import sunnyIcon from "../../assets/images/icon-sunny.webp";
@@ -8,6 +10,20 @@ import fogIcon from "../../assets/images/icon-fog.webp";
 import dropDownIcon from "../../assets/images/icon-dropdown.svg";
 
 const HourlyForecast = () => {
+    const [selectedDay, setSelectedDay] = useState("Tuesday");
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const wrapperRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+                setIsDropdownOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
     const hours = [
         { time: "3 PM", temp: 20, icon: overcastIcon },
         { time: "4 PM", temp: 30, icon: partlyCloudyIcon },
@@ -20,12 +36,29 @@ const HourlyForecast = () => {
     ];
 
     return (
-        <div className={styles.hourlyForecast}>
+        <div className={styles.hourlyForecast} ref={wrapperRef}>
             <div className={styles.header}>
                 <h2 className={styles.title}>Hourly forecast</h2>
                 <div className={styles.selector}>
-                    <span>Tuesday</span>
-                    <img src={dropDownIcon} alt="" />
+                    <span>{selectedDay}</span>
+                    <img
+                        src={dropDownIcon}
+                        alt="Toggle dropdown"
+                        className={`${styles.dropdownIcon} ${isDropdownOpen ? styles.open : ""}`}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setIsDropdownOpen((prev) => !prev);
+                        }}
+                    />
+                    {isDropdownOpen && (
+                        <DayDropdown
+                            selectedDay={selectedDay}
+                            setSelectedDay={(day) => {
+                                setSelectedDay(day);
+                                setIsDropdownOpen(false);
+                            }}
+                        />
+                    )}
                 </div>
             </div>
 

@@ -10,6 +10,8 @@
     border-radius: var(--radius-8);
     background-color: inherit;
     cursor: pointer;
+    max-height: 2.4375rem;
+    min-width: 12.375rem;
 }
 
 .button:hover {
